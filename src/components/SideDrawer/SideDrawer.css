@@ -1,0 +1,80 @@
+.side-drawer {
+  height: 100%;
+  background: white;
+  box-shadow: 1px 0 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  /* width: 90%; */
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.side-drawer ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.side-drawer ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.side-drawer a:hover,
+.side-drawer a:active {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+.close__drawer-button {
+  height: 30px;
+  width: 30px;
+  margin-top: 15px;
+  margin-right: 15px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  cursor: pointer;
+  /* background-color: red */
+  /* justify-content: space-around;     */
+}
+
+.close__drawer-button__element {
+  margin-top: 14px;
+  height: 2px;
+  width: 30px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.5s ease-out;
+}
+
+.close__drawer-button :nth-child(1) {
+  transform: rotate(0);
+}
+
+.close__drawer-button :nth-child(2) {
+  transform: rotate(0);
+}
+
+.side-drawer.show {
+  transform: translateX(0);
+}
+
+.side-drawer.show .close__drawer-button__element {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.side-drawer.show .close__drawer-button :nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.side-drawer.show .close__drawer-button :nth-child(2) {
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,14 @@
+html, body{
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    /* width: auto; */
+	padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+
+.app{
+    width: 100%;
+}

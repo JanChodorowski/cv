@@ -1,0 +1,33 @@
+.toggle-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+  float: right;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__line {
+  width: 30px;
+  height: 2px;
+  border-radius: 3px;
+  background: white;
+  transition: 3s all ease-in-out;
+}
+/* 
+.hide{
+    opacity: 0;
+} */
+
+.topRotateDown {
+  transform-origin: 0 0;
+  transform: translate(2px, 1px) rotate(-45deg);
+}
