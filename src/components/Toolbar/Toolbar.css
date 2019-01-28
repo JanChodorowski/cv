@@ -3,15 +3,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: #555555;
+  background: rgba(0, 0, 0, 0.13);
   height: 56px;
 }
 
-.toolbar__logo a {
-  color: white;
+.toolbar__logo img {
+  height: 40px;
   text-decoration: none;
-  font-size: 1.5rem;
-  margin-left: 1rem;
+  margin: 15px 0 0 15px;
 }
 
 .toolbar__navigation {
@@ -26,6 +25,8 @@
   margin: 0;
   padding: 0;
   display: flex;
+
+  margin-top: 30px;
 }
 
 .toolbar__navigation li {
@@ -33,23 +34,48 @@
 }
 
 .toolbar_navigation-items a {
-  color: white;
+   color: #353948;
   text-decoration: none;
   font-size: 1.5.rem;
 }
 
 .toolbar_navigation-items a:hover,
 .toolbar_navigation-items a:active {
-  color: red;
+  color: #ec1923;
+}
+
+.activeRoute {
+  border-bottom: 1px solid #ec1923;
 }
 
 .spacer {
   flex: 1; /*occupy all the available space between items */
 }
 
+li.contactMe {
+  margin-top: -10px;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 10px;
+  border: 1px red solid;
+  color: red;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+li.contactMe:hover {
+  color: white;
+  background: red;
+}
+
+.github__logo img {
+  margin-top: -5px;
+  height: 30px;
+}
+
 @media (max-width: 600px) {
   .toolbar_navigation-items {
-
     display: none;
   }
 }

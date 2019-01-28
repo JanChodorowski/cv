@@ -1,14 +1,17 @@
-html, body{
-    font-family: sans-serif;
-    height: 100%;
-    width: 100%;
-    /* width: auto; */
-	padding: 0;
-    margin: 0;
-    /* box-sizing: border-box; */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+html,
+body {
+  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+}
 
-.app{
-    width: 100%;
+#app {
+  width: 100%;
+  height: 100%;
 }

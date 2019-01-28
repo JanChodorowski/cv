@@ -16,6 +16,7 @@ export default class App extends Component {
     sideDrawer: false,
     locale: "en"
   };
+
   localeChanged = locale => {
     this.setState({ locale }); //causes rerender
   };
@@ -36,9 +37,11 @@ export default class App extends Component {
     // I18n.changeLocale("pl");
     // console.log("po zmianie języka");
     // console.log(I18n);
+    
+
     return (
       <div id="app">
-        <Toolbar drawerOpenClickHandler={()=>this.openDrawer(true)} />
+        <Toolbar drawerOpenClickHandler={() => this.openDrawer(true)} locale={this.state.locale} />
 
         <SideDrawer
           show={this.state.sideDrawer}
@@ -55,8 +58,8 @@ export default class App extends Component {
           <Profile path="/profile/" user="me" />
           <Profile path="/profile/:user" />
         </Router>
-        <div>{I18n.t("test")}</div>
-        <div translate="yes">translate test</div>
+        {/* <div>{I18n.t("test")}</div>
+        <div translate="yes">translate test</div> */}
       </div>
     );
   }
