@@ -42,19 +42,26 @@ const toolbar = props => {
                 my profile
               </Link>
             </li>
-           
+          </ul>
+        </div>
+
+        <div className="toolbar__tools">
+          <ul>
             <li class="contactMe">Contact Me</li>
 
             <li class="github__logo">
               <img src={GithubLogo} />
             </li>
+            
+            <li className="language__switcher">
+              <span className={plClass} onClick={() => I18n.changeLocale("pl")}>
+                PL |
+              </span>
+              <span className={enClass} onClick={() => I18n.changeLocale("en")}>
+                 EN
+              </span>
+            </li>
 
-            <li className={plClass} onClick={() => I18n.changeLocale("pl")}>
-              PL
-            </li>
-            <li className={enClass} onClick={() => I18n.changeLocale("en")}>
-              EN
-            </li>
           </ul>
         </div>
       </nav>

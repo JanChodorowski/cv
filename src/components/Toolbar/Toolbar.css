@@ -26,17 +26,21 @@
   padding: 0;
   display: flex;
 
-  margin-top: 30px;
+
 }
 
 .toolbar__navigation li {
   padding: 0 0.5rem;
+  margin-right: 1rem;
+
+  line-height: 35px;
+  height: 35px;
 }
 
 .toolbar_navigation-items a {
    color: #353948;
   text-decoration: none;
-  font-size: 1.5.rem;
+  font-size: 0.75rem;
 }
 
 .toolbar_navigation-items a:hover,
@@ -48,30 +52,51 @@
   border-bottom: 1px solid #ec1923;
 }
 
+
+.toolbar__tools ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: 30px;
+}
+
+.toolbar__tools li{
+  
+  /* background: #ec1923; */
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+  line-height: 35px;
+  height: 35px;
+}
+
 .spacer {
   flex: 1; /*occupy all the available space between items */
 }
 
 li.contactMe {
-  margin-top: -10px;
+  /* box-sizing: border-box; */
+  /* margin: -10px 15px 0; */
   border-radius: 20px;
-  display: inline-block;
-  padding: 10px;
-  border: 1px red solid;
-  color: red;
+  /* display: inline-block; */
+  padding: 0 15px;
+  border: 1px #ec1923 solid;
+  color: #ec1923;
   background: white;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  margin-right: 20px;
 }
 
 li.contactMe:hover {
   color: white;
-  background: red;
+  background: #ec1923;
 }
 
 .github__logo img {
-  margin-top: -5px;
-  height: 30px;
+  /* margin-top: -5px; */
+  height: 35px;
 }
 
 @media (max-width: 600px) {
