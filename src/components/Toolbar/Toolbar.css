@@ -7,7 +7,8 @@
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
-nav *::selection { /* there is some bug, unable to stack selectors */
+nav *::selection {
+  /* there is some bug, unable to stack selectors */
   background: none;
 }
 
@@ -38,7 +39,6 @@ nav *::-moz-selection {
 .toolbar__navigation li {
   padding: 0 0.5rem;
   margin-right: 1rem;
-
   line-height: 35px;
   height: 100%;
 }
@@ -106,19 +106,28 @@ li.contactMe:hover {
   opacity: 1;
 }
 
-span.active{
+span.active {
   opacity: 1;
 }
 
 span {
   padding: 0 5px;
   opacity: 0.5;
-  cursor: pointer 
+  cursor: pointer;
 }
 
-
-@media (max-width: 600px) {
+@media (max-width: 599px) {
+  .toolbar__tools,
   .toolbar_navigation-items {
+    display: none;
+  }
+
+  .toolbar__navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .spacer {
     display: none;
   }
 }

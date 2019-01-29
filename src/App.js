@@ -13,7 +13,7 @@ import I18n from "./i18n/settings";
 
 export default class App extends Component {
   state = {
-    sideDrawer: false,
+    sideDrawer: true,
     locale: "en"
   };
 
@@ -37,19 +37,23 @@ export default class App extends Component {
     // I18n.changeLocale("pl");
     // console.log("po zmianie języka");
     // console.log(I18n);
-    
 
     return (
       <div id="app">
-        <Toolbar drawerOpenClickHandler={() => this.openDrawer(true)} locale={this.state.locale} />
+        <Toolbar
+          drawerOpenClickHandler={() => this.openDrawer(true)}
+          locale={this.state.locale}
+        />
 
         <SideDrawer
           show={this.state.sideDrawer}
           closeSideDrawer={() => this.openDrawer(false)}
+          locale={this.state.locale}
         />
 
         <Backdrop
           show={this.state.sideDrawer}
+          locale={this.state.locale}
           clickHandler={() => this.openDrawer(false)}
         />
 

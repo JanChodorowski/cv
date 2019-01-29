@@ -5,12 +5,56 @@
   position: fixed;
   top: 0;
   left: 0;
-  /* width: 400px; */
-  max-width: 400px;
+  max-width: 320px;
   width: 80%;
   z-index: 200;
   transform: translateX(-100%);
   transition: transform 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  margin-top: 50px;
+  clear: right;
+}
+
+.avatar img {
+  margin: auto;
+  width: 90%;
+  max-width: 170px;
+  display: block;
+}
+
+.name {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.contactMe {
+  display: table;
+  margin: 20px auto;
+  font-size: 14px;
+  border-radius: 20px;
+  padding:10px 15px;
+  border: 1px #ec1923 solid;
+  color: #ec1923;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.contactMe:hover {
+  color: white;
+  background: #ec1923;
+}
+
+.side-drawer_navigation-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: rgb(0, 0, 0,0.02);
 }
 
 .side-drawer ul {
@@ -21,10 +65,26 @@
   justify-content: center;
 }
 
+
+.side-drawer ul li:first-child {
+  /* border-top: .0625rem solid red; */
+}
+
+.side-drawer ul li {
+  /* border-bottom: .0625rem solid red; */
+  height: 30px;
+  padding-left: 30px;
+  
+}
+
 .side-drawer ul a {
   text-decoration: none;
-  color: black;
-  font-size: 1.5rem;
+
+
+  color: #353948;
+  text-decoration: none;
+  font-size: 0.75rem;
+  line-height: 100%;
 }
 
 .side-drawer a:hover,
@@ -33,49 +93,24 @@
   font-weight: 400;
 }
 
-.close__drawer-button {
-  height: 30px;
-  width: 30px;
-  margin-top: 15px;
-  margin-right: 15px;
-  padding: 0;
+.bottom-section {
   display: flex;
+  height: 110px;
   flex-direction: column;
-  float: right;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.githubLogo {
+  height: 35px;
+}
+
+span.active {
+  opacity: 1;
+}
+
+span {
+  padding: 0 5px;
+  opacity: 0.5;
   cursor: pointer;
-  /* background-color: red */
-  /* justify-content: space-around;     */
-}
-
-.close__drawer-button__element {
-  margin-top: 14px;
-  height: 2px;
-  width: 30px;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0);
-  transition: all 0.5s ease-out;
-}
-
-.close__drawer-button :nth-child(1) {
-  transform: rotate(0);
-}
-
-.close__drawer-button :nth-child(2) {
-  transform: rotate(0);
-}
-
-.side-drawer.show {
-  transform: translateX(0);
-}
-
-.side-drawer.show .close__drawer-button__element {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.side-drawer.show .close__drawer-button :nth-child(1) {
-  transform: rotate(45deg);
-}
-
-.side-drawer.show .close__drawer-button :nth-child(2) {
-  transform: rotate(-45deg);
 }

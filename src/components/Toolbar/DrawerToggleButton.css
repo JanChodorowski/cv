@@ -11,6 +11,10 @@
   float: right;
 }
 
+.toggle-button:hover .toggle-button__line{
+  background: rgba(1, 1, 1, 0.5);
+}
+
 .toggle-button:focus {
   outline: none;
 }
@@ -19,8 +23,8 @@
   width: 30px;
   height: 2px;
   border-radius: 3px;
-  background: white;
-  transition: 3s all ease-in-out;
+  background: rgba(1, 1, 1, 0.2);
+  transition: 0.3s all ease-in-out;
 }
 /* 
 .hide{
