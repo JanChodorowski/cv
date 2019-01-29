@@ -3,8 +3,16 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.13);
-  height: 56px;
+  height: 60px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+nav *::selection { /* there is some bug, unable to stack selectors */
+  background: none;
+}
+
+nav *::-moz-selection {
+  background: none;
 }
 
 .toolbar__logo img {
@@ -25,8 +33,6 @@
   margin: 0;
   padding: 0;
   display: flex;
-
-
 }
 
 .toolbar__navigation li {
@@ -34,11 +40,11 @@
   margin-right: 1rem;
 
   line-height: 35px;
-  height: 35px;
+  height: 100%;
 }
 
 .toolbar_navigation-items a {
-   color: #353948;
+  color: #353948;
   text-decoration: none;
   font-size: 0.75rem;
 }
@@ -52,7 +58,6 @@
   border-bottom: 1px solid #ec1923;
 }
 
-
 .toolbar__tools ul {
   list-style: none;
   margin: 0;
@@ -61,8 +66,7 @@
   margin-left: 30px;
 }
 
-.toolbar__tools li{
-  
+.toolbar__tools li {
   /* background: #ec1923; */
   padding: 0;
   margin: 0;
@@ -76,10 +80,8 @@
 }
 
 li.contactMe {
-  /* box-sizing: border-box; */
-  /* margin: -10px 15px 0; */
+  font-size: 14px;
   border-radius: 20px;
-  /* display: inline-block; */
   padding: 0 15px;
   border: 1px #ec1923 solid;
   color: #ec1923;
@@ -95,9 +97,25 @@ li.contactMe:hover {
 }
 
 .github__logo img {
-  /* margin-top: -5px; */
   height: 35px;
+  opacity: 0.75;
+  transition: opacity 0.3s ease-in-out;
 }
+
+.github__logo img:hover {
+  opacity: 1;
+}
+
+span.active{
+  opacity: 1;
+}
+
+span {
+  padding: 0 5px;
+  opacity: 0.5;
+  cursor: pointer 
+}
+
 
 @media (max-width: 600px) {
   .toolbar_navigation-items {

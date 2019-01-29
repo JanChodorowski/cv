@@ -18,6 +18,10 @@ const toolbar = props => {
     plClass = "active";
   }
 
+  const alertNetworkMessage = ()=>{
+    alert(I18n.t("alertNetworkMessage"))
+  }
+
   return (
     <header className="toolbar">
       <nav className="toolbar__navigation">
@@ -49,19 +53,23 @@ const toolbar = props => {
           <ul>
             <li class="contactMe">Contact Me</li>
 
-            <li class="github__logo">
-              <img src={GithubLogo} />
-            </li>
-            
-            <li className="language__switcher">
-              <span className={plClass} onClick={() => I18n.changeLocale("pl")}>
-                PL |
-              </span>
-              <span className={enClass} onClick={() => I18n.changeLocale("en")}>
-                 EN
-              </span>
+            <li title={I18n.t("gitRepoLink")} class="github__logo">
+              <a
+                onClick={alertNetworkMessage}
+                href="https://github.com/JanChodorowski/cv"
+              >
+                <img src={GithubLogo} />
+              </a>
             </li>
 
+            <li className="language__switcher">
+              <span title="Język polski" className={plClass} onClick={() => I18n.changeLocale("pl")}>
+                PL
+              </span>
+              <span title="English language" className={enClass} onClick={() => I18n.changeLocale("en")}>
+                EN
+              </span>
+            </li>
           </ul>
         </div>
       </nav>
