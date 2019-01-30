@@ -31,12 +31,12 @@
   text-align: center;
 }
 
-.contactMe {
+div.contactMe {
   display: table;
   margin: 20px auto;
   font-size: 14px;
   border-radius: 20px;
-  padding:10px 15px;
+  padding: 10px 15px;
   border: 1px #ec1923 solid;
   color: #ec1923;
   background: white;
@@ -44,9 +44,19 @@
   transition: all 0.2s ease-in-out;
 }
 
-.contactMe:hover {
-  color: white;
+div.contactMe:hover {
   background: #ec1923;
+  color: white;
+}
+
+div.contactMe a {
+  transition: all 0.2s ease-in-out;
+  color: #ec1923;
+  text-decoration: none;
+}
+
+div.contactMe:hover a {
+  color: white;
 }
 
 .side-drawer_navigation-items {
@@ -54,7 +64,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  background: rgb(0, 0, 0,0.02);
+  background: rgb(0, 0, 0, 0.02);
 }
 
 .side-drawer ul {
@@ -65,7 +75,6 @@
   justify-content: center;
 }
 
-
 .side-drawer ul li:first-child {
   /* border-top: .0625rem solid red; */
 }
@@ -74,12 +83,10 @@
   /* border-bottom: .0625rem solid red; */
   height: 30px;
   padding-left: 30px;
-  
 }
 
 .side-drawer ul a {
   text-decoration: none;
-
 
   color: #353948;
   text-decoration: none;

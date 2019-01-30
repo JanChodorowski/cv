@@ -8,6 +8,7 @@ import Backdrop from "./components/Backdrop/Backdrop";
 // Code-splitting is automated for routes
 import Home from "./routes/home";
 import Profile from "./routes/profile";
+import Contact from "./routes/contact"
 
 import I18n from "./i18n/settings";
 
@@ -61,6 +62,7 @@ export default class App extends Component {
           <Home path="/" />
           <Profile path="/profile/" user="me" />
           <Profile path="/profile/:user" />
+          <Contact path="/contact" />
         </Router>
         {/* <div>{I18n.t("test")}</div>
         <div translate="yes">translate test</div> */}

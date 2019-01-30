@@ -36,7 +36,9 @@ const sideDrawer = props => {
         <img src={GithubLogo} />
       </div>
       <div className="name">Jan Chodorowski</div>
-      <div class="contactMe">{I18n.t("contactMe")}</div>
+      <div class="contactMe">
+        <a href="/contact">{I18n.t("contactMe")}</a>
+      </div>
 
       <div className="side-drawer_navigation-items">
         <ul>
@@ -52,16 +54,11 @@ const sideDrawer = props => {
           </li>
 
           <li>
-            <Link  href="/">
-              some
-            </Link>
-          </li><li>
-            <Link  href="/">
-              placeholder
-            </Link>
+            <Link href="/">some</Link>
           </li>
-
-
+          <li>
+            <Link href="/">placeholder</Link>
+          </li>
         </ul>
       </div>
 

@@ -18,9 +18,9 @@ const toolbar = props => {
     plClass = "active";
   }
 
-  const alertNetworkMessage = ()=>{
-    alert(I18n.t("alertNetworkMessage"))
-  }
+  const alertNetworkMessage = () => {
+    alert(I18n.t("alertNetworkMessage"));
+  };
 
   return (
     <header className="toolbar">
@@ -51,7 +51,9 @@ const toolbar = props => {
 
         <div className="toolbar__tools">
           <ul>
-            <li class="contactMe">Contact Me</li>
+            <li class="contactMe">
+              <a href="/contact">Contact Me</a>
+            </li>
 
             <li title={I18n.t("gitRepoLink")} class="github__logo">
               <a
@@ -63,10 +65,18 @@ const toolbar = props => {
             </li>
 
             <li className="language__switcher">
-              <span title="Język polski" className={plClass} onClick={() => I18n.changeLocale("pl")}>
+              <span
+                title="Język polski"
+                className={plClass}
+                onClick={() => I18n.changeLocale("pl")}
+              >
                 PL
               </span>
-              <span title="English language" className={enClass} onClick={() => I18n.changeLocale("en")}>
+              <span
+                title="English language"
+                className={enClass}
+                onClick={() => I18n.changeLocale("en")}
+              >
                 EN
               </span>
             </li>

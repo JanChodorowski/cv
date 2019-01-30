@@ -67,7 +67,6 @@ nav *::-moz-selection {
 }
 
 .toolbar__tools li {
-  /* background: #ec1923; */
   padding: 0;
   margin: 0;
   margin-right: 10px;
@@ -84,16 +83,24 @@ li.contactMe {
   border-radius: 20px;
   padding: 0 15px;
   border: 1px #ec1923 solid;
-  color: #ec1923;
-  background: white;
+
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   margin-right: 20px;
 }
 
 li.contactMe:hover {
+ background: #ec1923;
+}
+
+li.contactMe a {
+  transition: all 0.2s ease-in-out;
+  color: #ec1923;
+  text-decoration: none;
+}
+
+li.contactMe:hover a {
   color: white;
-  background: #ec1923;
 }
 
 .github__logo img {
