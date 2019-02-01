@@ -1,7 +1,8 @@
 {
   "en": {
-    "alertnetworkmessage_bf4c3a7e": "alertNetworkMessage",
+    "alertnetworkmessage_bf4c3a7e": "Now you have to connect to Wifi",
     "contactme_c658c39e": "Contact Me",
-    "gitrepolink_53d69b65": "gitRepoLink"
+    "contactwithme_516bf5ad": "Contact me",
+    "gitrepolink_53d69b65": "Github repo of this project"
   }
 }

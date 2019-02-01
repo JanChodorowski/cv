@@ -3,8 +3,8 @@ import "./Toolbar.css";
 import DrawerToggleButton from "./DrawerToggleButton";
 import { Link } from "preact-router/match";
 import I18n from "../../i18n/settings";
-import Logo from "../../../logo.png";
-import GithubLogo from "../../../githubLogo.svg";
+import Logo from "../../../assets/logo.png";
+import GithubLogo from "../../../assets/githubLogo.svg";
 // import { connect } from "preact-redux";
 // import { CHANGE_LANGUAGE } from "../../store/actions";
 

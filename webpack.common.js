@@ -26,19 +26,40 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
       },
-      // {
-      //   test: /\.json$/,
-      //   loader: 'json-loader'
-      // },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.svg$/,
+        use: {
+          loader: "base64-inline-loader"
+        }
+      },
+
+      // {
+      //   test: /\.svg$/,
+      //   use: {
+      //     loader: "file-loader"
+
+      //   }
+      // },
+      // {
+      //   test: /.svg$/,
+      //   use: {
+      //     loader: "svg-url-loader",
+      //     options: {
+      //       encoding: "none",
+      //       noquotes: true,
+      //       stripdeclarations: true
+      //     }
+      //   }
+      // },
+
+      {
+        test: /\.(png|jpg|gif)$/,
         use: [
           "file-loader",
           {
             loader: "image-webpack-loader",
             options: {
-              bypassOnDebug: true, // webpack@1.x
-              //disable: true,// webpack@2.x and newer
+              bypassOnDebug: true,
               mozjpeg: {
                 progressive: true,
                 quality: 65
@@ -47,10 +68,7 @@ module.exports = {
           }
         ]
       },
-      // {
-      //   test: /\.js$/,
-      //   loader: "preact-i18nline/webpack-loader"
-      // },
+
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
@@ -67,14 +85,3 @@ module.exports = {
     ]
   }
 };
-
-// {
-//     "presets": [
-//         "@babel/preset-env"
-//     ],
-//     "plugins": [
-//         ["@babel/plugin-transform-react-jsx", { "pragma":"h" }]
-//       ]
-// }
-
-//add tree shaking

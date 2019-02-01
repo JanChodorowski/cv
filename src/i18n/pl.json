@@ -1,7 +1,8 @@
 {
   "pl": {
-    "alertnetworkmessage_bf4c3a7e": "alertNetworkMessage",
+    "alertnetworkmessage_bf4c3a7e": "Teraz musisz połączyć się z WiFi",
     "contactme_c658c39e": "Kontakt",
-    "gitrepolink_53d69b65": "gitRepoLink"
+    "contactwithme_516bf5ad": "Skontaktuj się ze mną",
+    "gitrepolink_53d69b65": "Repozytorium tego projektu"
   }
 }

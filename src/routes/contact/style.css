@@ -1,0 +1,76 @@
+div.contact {
+  /* background: rgba(0, 0, 0, 0.1); */
+  height: 100%;
+  padding-top: 100px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+.heading {
+  text-align: center
+}
+
+.contactItems {
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; */
+  /* height: 300px; */
+  margin: 0 auto;
+  max-width: 500px;
+  display: flex;
+  align-items: baseline;
+
+  justify-content: center;
+  flex-flow: row wrap;
+  align-content: center;
+
+}
+
+.contactItems > div {
+  /* width: 100px; */
+  /* height: 100px; */
+  flex: 1 0 50%;
+  line-height: 25px;
+}
+
+
+.icon {
+  padding: 10px;
+  margin: 30px 50px 30px auto;
+  height: 40px;
+  width: 40px;
+  background: #ec1923;
+  border-radius: 1000px;
+}
+
+.icon img {
+  height: 100%;
+}
+
+.plane {
+  height: 50px;
+  width: 50px;
+  margin: 10px auto;
+}
+
+.instagram {
+  height: 50px;
+  width: 50px;
+  margin: 10px auto;
+}
+
+
+@media (max-width: 599px) {
+  .contactItems > div {
+    text-align: center;
+    flex: 1 0 100%;
+  }
+  
+  .icon {
+   
+    margin: 50px auto 10px auto;
+
+  }
+
+}

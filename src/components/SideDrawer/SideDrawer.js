@@ -1,10 +1,10 @@
 import { h } from "preact";
 
 import I18n from "../../i18n/settings";
-import Logo from "../../../logo.png";
+// import Logo from "../../../logo.png";
 import { Link } from "preact-router/match";
-import GithubLogo from "../../../githubLogo.svg";
-import Avatar from "../../../githubLogo.svg";
+import GithubLogo from "../../../assets/githubLogo.svg";
+import Avatar from "../../../assets/githubLogo.svg";
 
 import "./SideDrawer.css";
 import CloseDrawerButton from "./DrawerCloseButton";
@@ -36,28 +36,40 @@ const sideDrawer = props => {
         <img src={GithubLogo} />
       </div>
       <div className="name">Jan Chodorowski</div>
-      <div class="contactMe">
+      <div onClick={() => props.closeSideDrawer(true)} class="contactMe">
         <a href="/contact">{I18n.t("contactMe")}</a>
       </div>
 
       <div className="side-drawer_navigation-items">
         <ul>
           <li>
-            <Link activeClassName="activeRoute" href="/">
+            <Link
+              onClick={() => props.closeSideDrawer(true)}
+              activeClassName="activeRoute"
+              href="/"
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link activeClassName="activeRoute" href="/profile/me">
+            <Link
+              onClick={() => props.closeSideDrawer(true)}
+              activeClassName="activeRoute"
+              href="/profile/me"
+            >
               my profile
             </Link>
           </li>
 
           <li>
-            <Link href="/">some</Link>
+            <Link onClick={() => props.closeSideDrawer(true)} href="/">
+              some
+            </Link>
           </li>
           <li>
-            <Link href="/">placeholder</Link>
+            <Link onClick={() => props.closeSideDrawer(true)} href="/">
+              placeholder
+            </Link>
           </li>
         </ul>
       </div>
