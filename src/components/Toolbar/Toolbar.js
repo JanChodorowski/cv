@@ -51,9 +51,9 @@ const toolbar = props => {
 
         <div className="toolbar__tools">
           <ul>
-            <li class="contactMe">
-              <a href="/contact">Contact Me</a>
-            </li>
+            <Link href="/contact">
+              <li class="contactMe">{I18n.t("contactMe")} </li>
+            </Link>
 
             <li title={I18n.t("gitRepoLink")} class="github__logo">
               <a

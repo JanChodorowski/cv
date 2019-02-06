@@ -1,10 +1,16 @@
 .toolbar {
   position: fixed;
+  z-index: 50;
   top: 0;
   left: 0;
   width: 100%;
   height: 60px;
+  background: white;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
 }
 
 nav *::selection {
@@ -74,7 +80,7 @@ nav *::-moz-selection {
   height: 35px;
 }
 
-.spacer {
+.toolbar .spacer {
   flex: 1; /*occupy all the available space between items */
 }
 
@@ -83,23 +89,21 @@ li.contactMe {
   border-radius: 20px;
   padding: 0 15px;
   border: 1px #ec1923 solid;
-
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   margin-right: 20px;
 }
 
 li.contactMe:hover {
- background: #ec1923;
+  background: #ec1923;
 }
 
-li.contactMe a {
-  transition: all 0.2s ease-in-out;
+a li.contactMe {
   color: #ec1923;
-  text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 
-li.contactMe:hover a {
+a li.contactMe:hover {
   color: white;
 }
 
@@ -113,11 +117,11 @@ li.contactMe:hover a {
   opacity: 1;
 }
 
-span.active {
+.toolbar span.active {
   opacity: 1;
 }
 
-span {
+.toolbar span {
   padding: 0 5px;
   opacity: 0.5;
   cursor: pointer;
@@ -134,7 +138,7 @@ span {
     justify-content: space-between;
   }
 
-  .spacer {
+  .toolbar.spacer {
     display: none;
   }
 }

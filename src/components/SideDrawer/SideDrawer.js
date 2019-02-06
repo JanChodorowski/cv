@@ -36,8 +36,13 @@ const sideDrawer = props => {
         <img src={GithubLogo} />
       </div>
       <div className="name">Jan Chodorowski</div>
-      <div onClick={() => props.closeSideDrawer(true)} class="contactMe">
-        <a href="/contact">{I18n.t("contactMe")}</a>
+
+      <div className="contactCenter">
+        <Link href="/contact">
+          <div onClick={() => props.closeSideDrawer(true)} class="contactMe">
+            {I18n.t("contactMe")}
+          </div>
+        </Link>
       </div>
 
       <div className="side-drawer_navigation-items">

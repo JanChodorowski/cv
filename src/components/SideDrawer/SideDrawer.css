@@ -7,7 +7,7 @@
   left: 0;
   max-width: 320px;
   width: 80%;
-  z-index: 200;
+  z-index: 100;
   transform: translateX(-100%);
   transition: transform 0.5s ease-out;
   display: flex;
@@ -31,8 +31,12 @@
   text-align: center;
 }
 
+.contactCenter {
+  text-align: center;
+}
+
 div.contactMe {
-  display: table;
+  display: inline-block;
   margin: 20px auto;
   font-size: 14px;
   border-radius: 20px;

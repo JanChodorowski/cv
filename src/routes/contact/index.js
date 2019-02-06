@@ -10,52 +10,61 @@ import Instagram from "../../../assets/instagram.svg";
 
 import "./style.css";
 
-const contact = () => (
-  <div className="contact">
-    <div className="heading">{I18n.t("contactWithMe")}</div>
-    <div className="plane">
-      <img src={Plane} />
-    </div>
+const contact = () => {
+  const alertNetworkMessage = () => {
+    alert(I18n.t("alertNetworkMessage"));
+  };
 
-    <div className="separator" />
+  return (
+    <div className="contact">
+      <div className="top-section">
+        <div className="plane">
+          <div className="plane__circle">
+            <img src={Plane} />
+          </div>
+        </div>
 
-    <div className="contactItems">
-      <div className="mobile">
-        <div className="icon">
-          <img src={Mobile} />
+        <div className="heading">
+          <span>{I18n.t("contactWithMe")}</span>
+        </div>
+      </div>
+      {/* <div className="spacer"> test</div> */}
+      <div className="contact__items">
+        <div>
+          <div className="icon">
+            <img src={Mobile} />
+          </div>
+        </div>
+        <div>+48 111-111-111</div>
+
+        <div>
+          <div className="icon">
+            <img src={Mail} />
+          </div>
+        </div>
+
+        <div>aaaaaaaaaaa.a@aaaaa.aaa</div>
+
+        <div>
+          <div className="icon">
+            <img src={Location} />
+          </div>
+        </div>
+        <div>
+          <p>ul. Brzozowa 60</p>
+          <p>Wrocław</p>
         </div>
       </div>
 
-      <div className="phone">+48 111-111-111</div>
-
-      <div className="mail">
-        <div className="icon">
-          <img src={Mail} />
+      <div className="bottom-section">
+        <div onClick={alertNetworkMessage} className="instagram">
+          <a href="https://www.instagram.com/chodorowskijasiu/">
+            <img src={Instagram} />
+          </a>
         </div>
       </div>
-
-      <div className="email">aaaaaaaaaaa.a@aaaaa.aaa</div>
-
-      <div className="location">
-        <div className="icon">
-          <img src={Location} />
-        </div>
-      </div>
-
-      <div className="address">
-        <p>ul. Brzozowa 60 </p>
-        <p> Wrocław</p>
-      </div>
     </div>
-
-    <div className="separator" />
-
-    <div className="instagram">
-      <a href="https://www.instagram.com/chodorowskijasiu/">
-        <img src={Instagram} />
-      </a>
-    </div>
-  </div>
-);
+  );
+};
 
 export default contact;

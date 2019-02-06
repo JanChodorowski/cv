@@ -1,76 +1,108 @@
-div.contact {
-  /* background: rgba(0, 0, 0, 0.1); */
-  height: 100%;
-  padding-top: 100px;
-  max-width: 900px;
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  max-width: 500px;
   margin: 0 auto;
+  padding-top: 60px;
+  height: 100%;
 }
 
+div.top-section {
+  display: flex;
+  flex: 0 1 33%;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.top-section > div {
+  flex: 0 0 40%;
+}
 
 .heading {
-  text-align: center
+  display: inline-flex;
+  align-items: center;
+  font-size: 2.5rem;
+  order: 2;
 }
 
-.contactItems {
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: wrap; */
-  /* height: 300px; */
-  margin: 0 auto;
-  max-width: 500px;
-  display: flex;
-  align-items: baseline;
-
-  justify-content: center;
-  flex-flow: row wrap;
-  align-content: center;
-
-}
-
-.contactItems > div {
-  /* width: 100px; */
-  /* height: 100px; */
-  flex: 1 0 50%;
-  line-height: 25px;
-}
-
-
-.icon {
-  padding: 10px;
-  margin: 30px 50px 30px auto;
-  height: 40px;
-  width: 40px;
-  background: #ec1923;
-  border-radius: 1000px;
-}
-
-.icon img {
-  height: 100%;
+.heading span {
+  text-align: center;
 }
 
 .plane {
-  height: 50px;
-  width: 50px;
-  margin: 10px auto;
+  display: inline-flex;
+  align-items: center;
 }
 
-.instagram {
-  height: 50px;
-  width: 50px;
-  margin: 10px auto;
+.plane__circle {
+  margin: 0 auto;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  padding: 0.5rem;
 }
 
+.plane__circle img {
+  height: 4rem;
+  width: 4rem;
+}
 
-@media (max-width: 599px) {
-  .contactItems > div {
-    text-align: center;
-    flex: 1 0 100%;
+.contact__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact__items p {
+  text-align: center;
+}
+
+.contact__items > div {
+  flex: 0 1 100%;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  background: red;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.5rem;
+}
+
+.icon img {
+  height: 1.5rem;
+}
+
+.instagram img {
+  height: 2rem;
+}
+
+div.bottom-section {
+  flex: 1 1 10%;
+}
+
+@media (min-width: 600px) {
+  .contact__items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 300px;
   }
-  
-  .icon {
-   
-    margin: 50px auto 10px auto;
 
+  .contact__items p {
+    text-align: left;
   }
 
+  .contact__items > div {
+    flex: 0 0 30%;
+  }
+
+  .contact__items :nth-child(2n) {
+    flex: 1 0 70%;
+    align-self: center;
+    text-align: left;
+  }
 }
