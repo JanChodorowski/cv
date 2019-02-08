@@ -1,8 +1,124 @@
 .profile {
-	height: 100%;
-	padding: 100px 30px 0;
-	margin: 0;
-	width: 100%;
-   
+  height: 100%;
+  padding: 100px 0 0 0;
+  margin: 0;
+  width: 100%;
+}
+
+.top-section__icon {
+  display: block;
+  max-width: 10rem;
+  margin: 0 auto;
+}
+
+p.top-section__title {
+  opacity: 0.7;
+  text-align: center;
+  font-size: 2rem;
+}
+
+p.top-section__subtitle {
+  padding: 0 2rem;
+  text-align: center;
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+.profile .content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 3rem auto;
+}
+
+.profile .content p {
+  padding: 3rem;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.profile .icon-div {
+  width: 8rem;
+  height: 8rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.profile .icon-div img {
+  display: block;
+  height: 8rem;
+  width: 8rem;
+  margin: auto;
+}
+
+.profile .round {
+  border-radius: 50%;
+}
+
+.profile .icon-div.cat {
+  padding: 2rem;
+  background: red;
+}
+
+.profile .icon-div.cat img {
+  height: 4rem;
+  width: 4rem;
+}
+
+@media (min-width: 700px) {
+  .profile .content {
+    max-width: 750px;
+    margin: 3rem auto 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 2rem;
   }
-  
+
+  .profile .content > * {
+    flex: 0 1 60%;
+  }
+
+  .profile .content > *:nth-child(2n) {
+    flex: 0 1 40%;
+  }
+
+  .profile .icon-div {
+    margin-bottom: 5rem;
+  }
+
+  .profile .content p {
+    padding: 0;
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 5rem;
+  }
+
+  .p1 {
+    order: 1;
+  }
+  .p2 {
+    order: 4;
+  }
+  .p3 {
+    order: 5;
+  }
+  .p4 {
+    order: 8;
+  }
+
+  .icon1 {
+    order: 2;
+  }
+
+  .icon2 {
+    order: 3;
+  }
+
+  .icon3 {
+    order: 6;
+  }
+
+  .icon4 {
+    order: 7;
+  }
+}

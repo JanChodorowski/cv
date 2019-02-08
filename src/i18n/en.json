@@ -2,7 +2,19 @@
   "en": {
     "alertnetworkmessage_bf4c3a7e": "Now you have to connect to Wifi",
     "contactme_c658c39e": "Contact Me",
-    "contactwithme_516bf5ad": "Contact me",
-    "gitrepolink_53d69b65": "Github repo of this project"
+    "gitrepolink_53d69b65": "Github repo of this project",
+    "greeting_709b34": "Hi! I'm Jan",
+    "greetingsub_ee1e3bf2": "and I love technology!",
+    "homep1_b963695f": "I'm %{age} years old and I live in Wrocław. I have always been enthusiastic about computers and programming. In high school I chose class with extended curriculum in programming. At the university I wanted to get more familiar with hardware and electronics, so I applied for Robotics at a faculty of Electronics. I graduated with a master's degree in Embedded Robotics.",
+    "homep2_206a38e5": "Before settling down I decided to take the opportunity and see the world. As a consequence of that decision I moved to Brazil, and started a company there.",
+    "homep3_576d0873": "But my interest in programming have never faded away. During one of the online courses I've taken, I realized that I should turn mypassion into profession.",
+    "homep4_c9099dd0": "I believe that human beings are a never-ending work in progress, and the best way to make progress is to surround yourself with people that sustain and accelerate it.",
+    "homep5_be0ead46": "As a conclusion I decided to put my career in IT field, and the best place to do so, in my opinion, is the very same place that sparked my passion towards modern web apps – Monterail.",
+    "profilep1_ba5f5ad5": "I’ve always been interested in web development. It all started in primary school with web page creator in which I was able to put cat images on red background inside table layout. And from there it went on; HTML, CSS, PHP and JavaScript. JavaScript which I always thought I knew. It was that toy language used to do animations, right? Everyone knows JavaScript!",
+    "profilep2_23560b6f": "Only recently did I discover how shallow my percepcion and understanding of the language was, how it has changed over the years and how powerful and influential it has become. My interest in JS even more piqued when I learned about Node.js. It is possible to write web apps using the same language on the frontend as well as backend - simply amazing.",
+    "profilep3_54513bf9": "Ever since attending workshops organized by your company and learning the tools used by professionals, I wanted to work on your team",
+    "profilep4_ca35ae5a": "I am willing to learn the bleeding edge technology, learn new programming languages, frameworks and methodologies to expand my programming toolbox, as well as polish some basics that might have gotten a little rusty.",
+    "why_6a767b6c": "Why?",
+    "whysub_1ccf8c42": "Why am I applying for a job as Junior QA at Monterail?"
   }
 }

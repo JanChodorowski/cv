@@ -60,8 +60,7 @@ export default class App extends Component {
 
         <Router onChange={this.handleRoute}>
           <Home path="/" />
-          <Profile path="/profile/" user="me" />
-          <Profile path="/profile/:user" />
+          <Profile path="/profile/" />
           <Contact path="/contact" />
         </Router>
         {/* <div>{I18n.t("test")}</div>

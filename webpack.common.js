@@ -11,7 +11,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "CV",
+      title: "Jan Chodorowski",
       meta: {
         viewport: "width=device-width, initial-scale=1"
       }

@@ -2,7 +2,19 @@
   "en": {
     "alertnetworkmessage_bf4c3a7e": "alertNetworkMessage",
     "contactme_c658c39e": "contactMe",
-    "contactwithme_516bf5ad": "contactWithMe",
-    "gitrepolink_53d69b65": "gitRepoLink"
+    "gitrepolink_53d69b65": "gitRepoLink",
+    "greeting_709b34": "greeting",
+    "greetingsub_ee1e3bf2": "greetingSub",
+    "homep1_b963695f": "homeP1",
+    "homep2_206a38e5": "homeP2",
+    "homep3_576d0873": "homeP3",
+    "homep4_c9099dd0": "homeP4",
+    "homep5_be0ead46": "homeP5",
+    "profilep1_ba5f5ad5": "profileP1",
+    "profilep2_23560b6f": "profileP2",
+    "profilep3_54513bf9": "profileP3",
+    "profilep4_ca35ae5a": "profileP4",
+    "why_6a767b6c": "why",
+    "whysub_1ccf8c42": "whySub"
   }
 }

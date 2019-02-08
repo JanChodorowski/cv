@@ -4,9 +4,9 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "production",
-  optimization: { // this is set not to minimize 
-    minimizer: [],
-  },
+  // optimization: { // this is set not to minimize 
+  //   minimizer: [],
+  // },
 
   plugins: [
     // new ExtractTextPlugin('styles.css'),

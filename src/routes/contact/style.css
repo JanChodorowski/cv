@@ -5,15 +5,14 @@
   justify-content: end;
   max-width: 500px;
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 100px;
   height: 100%;
 }
 
 div.top-section {
   display: flex;
-  flex: 0 1 33%;
+  flex: 0 1 40%;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 .top-section > div {
@@ -21,32 +20,19 @@ div.top-section {
 }
 
 .heading {
-  display: inline-flex;
   align-items: center;
-  font-size: 2.5rem;
-  order: 2;
+  font-size: 1.5rem;
 }
 
 .heading span {
   text-align: center;
+  opacity: 0.5;
 }
 
 .plane {
-  display: inline-flex;
-  align-items: center;
-}
-
-.plane__circle {
-  margin: 0 auto;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 50%;
-  padding: 0.5rem;
-}
-
-.plane__circle img {
-  height: 4rem;
-  width: 4rem;
+  display: block;
+  margin: auto;
+  max-width: 10rem;
 }
 
 .contact__items {
@@ -85,7 +71,7 @@ div.bottom-section {
   flex: 1 1 10%;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .contact__items {
     flex-direction: row;
     flex-wrap: wrap;

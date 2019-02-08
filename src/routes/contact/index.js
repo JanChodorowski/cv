@@ -18,17 +18,16 @@ const contact = () => {
   return (
     <div className="contact">
       <div className="top-section">
-        <div className="plane">
-          <div className="plane__circle">
-            <img src={Plane} />
-          </div>
+        <div>
+          <img src={Plane} className="plane" />
         </div>
-
         <div className="heading">
-          <span>{I18n.t("contactWithMe")}</span>
+          <span>
+            {/* {I18n.t("contactMe")} */}
+            Jan Chodorowski
+          </span>
         </div>
       </div>
-      {/* <div className="spacer"> test</div> */}
       <div className="contact__items">
         <div>
           <div className="icon">

@@ -8,6 +8,12 @@
   background: white;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
 }
+.toolbar__navigation {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
 
 a {
   text-decoration: none;
@@ -28,109 +34,36 @@ nav *::-moz-selection {
   margin: 15px 0 0 15px;
 }
 
-.toolbar__navigation {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
-}
-
-.toolbar_navigation-items ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.toolbar__navigation li {
-  padding: 0 0.5rem;
-  margin-right: 1rem;
-  line-height: 35px;
-  height: 100%;
-}
-
-.toolbar_navigation-items a {
-  color: #353948;
-  text-decoration: none;
-  font-size: 0.75rem;
-}
-
-.toolbar_navigation-items a:hover,
-.toolbar_navigation-items a:active {
-  color: #ec1923;
-}
-
-.activeRoute {
-  border-bottom: 1px solid #ec1923;
-}
-
-.toolbar__tools ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  margin-left: 30px;
-}
-
-.toolbar__tools li {
-  padding: 0;
-  margin: 0;
-  margin-right: 10px;
-  line-height: 35px;
-  height: 35px;
-}
-
 .toolbar .spacer {
   flex: 1; /*occupy all the available space between items */
 }
 
-li.contactMe {
-  font-size: 14px;
-  border-radius: 20px;
-  padding: 0 15px;
-  border: 1px #ec1923 solid;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  margin-right: 20px;
+.toolbar__tools,
+.toolbar_navigation-items {
+  display: none;
 }
 
-li.contactMe:hover {
-  background: #ec1923;
+.toolbar__navigation {
+  display: flex;
+  justify-content: space-between;
 }
 
-a li.contactMe {
-  color: #ec1923;
-  transition: all 0.2s ease-in-out;
+.toolbar.spacer {
+  display: none;
 }
 
-a li.contactMe:hover {
-  color: white;
-}
+@media (min-width: 700px) {
+  .toolbar__toggle-button {
+    display: none;
+  }
 
-.github__logo img {
-  height: 35px;
-  opacity: 0.75;
-  transition: opacity 0.3s ease-in-out;
-}
+  .toolbar__logo {
+    margin-left: 0;
+  }
 
-.github__logo img:hover {
-  opacity: 1;
-}
-
-.toolbar span.active {
-  opacity: 1;
-}
-
-.toolbar span {
-  padding: 0 5px;
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-@media (max-width: 599px) {
   .toolbar__tools,
   .toolbar_navigation-items {
-    display: none;
+    display: block;
   }
 
   .toolbar__navigation {
@@ -141,13 +74,92 @@ a li.contactMe:hover {
   .toolbar.spacer {
     display: none;
   }
-}
-@media (min-width: 600px) {
-  .toolbar__toggle-button {
-    display: none;
+
+  .toolbar_navigation-items ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
   }
 
-  .toolbar__logo {
-    margin-left: 0;
+  .toolbar__navigation li {
+    padding: 0 0.5rem;
+    margin-right: 1rem;
+    line-height: 35px;
+    height: 100%;
+  }
+
+  .toolbar_navigation-items a {
+    color: #353948;
+    text-decoration: none;
+    font-size: 0.75rem;
+  }
+
+  .toolbar_navigation-items a:hover,
+  .toolbar_navigation-items a:active {
+    color: #ec1923;
+  }
+
+  .active-route {
+    border-bottom: 1px solid #ec1923;
+  }
+
+  .toolbar__tools ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: 30px;
+  }
+
+  .toolbar__tools li {
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+    line-height: 35px;
+    height: 35px;
+  }
+
+  li.contact-me {
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 0 15px;
+    border: 1px #ec1923 solid;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-right: 20px;
+  }
+
+  li.contact-me:hover {
+    background: #ec1923;
+  }
+
+  a li.contact-me {
+    color: #ec1923;
+    transition: all 0.2s ease-in-out;
+  }
+
+  a li.contact-me:hover {
+    color: white;
+  }
+
+  .github__logo img {
+    height: 35px;
+    opacity: 0.75;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .github__logo img:hover {
+    opacity: 1;
+  }
+
+  .toolbar span.active-lang {
+    opacity: 1;
+  }
+
+  .toolbar span {
+    padding: 0 5px;
+    opacity: 0.5;
+    cursor: pointer;
   }
 }

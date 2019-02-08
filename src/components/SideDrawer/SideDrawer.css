@@ -17,6 +17,7 @@
 .avatar {
   margin-top: 50px;
   clear: right;
+  
 }
 
 .avatar img {
@@ -24,6 +25,8 @@
   width: 90%;
   max-width: 170px;
   display: block;
+  border-radius: 50%;
+ 
 }
 
 .name {
@@ -31,11 +34,11 @@
   text-align: center;
 }
 
-.contactCenter {
+.contact__center {
   text-align: center;
 }
 
-div.contactMe {
+div.contact-me {
   display: inline-block;
   margin: 20px auto;
   font-size: 14px;
@@ -48,18 +51,18 @@ div.contactMe {
   transition: all 0.2s ease-in-out;
 }
 
-div.contactMe:hover {
+div.contact-me:hover {
   background: #ec1923;
   color: white;
 }
 
-div.contactMe a {
+div.contact-me a {
   transition: all 0.2s ease-in-out;
   color: #ec1923;
   text-decoration: none;
 }
 
-div.contactMe:hover a {
+div.contact-me:hover a {
   color: white;
 }
 
@@ -79,19 +82,13 @@ div.contactMe:hover a {
   justify-content: center;
 }
 
-.side-drawer ul li:first-child {
-  /* border-top: .0625rem solid red; */
-}
-
 .side-drawer ul li {
-  /* border-bottom: .0625rem solid red; */
   height: 30px;
   padding-left: 30px;
 }
 
 .side-drawer ul a {
   text-decoration: none;
-
   color: #353948;
   text-decoration: none;
   font-size: 0.75rem;
@@ -112,7 +109,8 @@ div.contactMe:hover a {
   justify-content: space-evenly;
 }
 
-.githubLogo {
+.github__logo,
+.github__logo img{
   height: 35px;
 }
 
@@ -120,8 +118,17 @@ span.active {
   opacity: 1;
 }
 
-span {
+.side-drawer span {
   padding: 0 5px;
   opacity: 0.5;
   cursor: pointer;
+}
+
+
+.active-route {
+  border-bottom: 1px solid #ec1923;
+}
+
+.side-drawer span.active-lang {
+  opacity: 1;
 }

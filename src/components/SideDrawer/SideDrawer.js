@@ -1,10 +1,9 @@
 import { h } from "preact";
 
 import I18n from "../../i18n/settings";
-// import Logo from "../../../logo.png";
 import { Link } from "preact-router/match";
 import GithubLogo from "../../../assets/githubLogo.svg";
-import Avatar from "../../../assets/githubLogo.svg";
+import Avatar from "../../../assets/me.jpg";
 
 import "./SideDrawer.css";
 import CloseDrawerButton from "./DrawerCloseButton";
@@ -23,9 +22,9 @@ const sideDrawer = props => {
     enClass = "";
 
   if (props.locale === "en") {
-    enClass = "active";
+    enClass = "active-lang";
   } else if (props.locale === "pl") {
-    plClass = "active";
+    plClass = "active-lang";
   }
 
   return (
@@ -33,13 +32,13 @@ const sideDrawer = props => {
       <CloseDrawerButton closeSideDrawer={props.closeSideDrawer} />
 
       <div className="avatar">
-        <img src={GithubLogo} />
+        <img src={Avatar} />
       </div>
       <div className="name">Jan Chodorowski</div>
 
-      <div className="contactCenter">
+      <div className="contact__center">
         <Link href="/contact">
-          <div onClick={() => props.closeSideDrawer(true)} class="contactMe">
+          <div onClick={() => props.closeSideDrawer(true)} class="contact-me">
             {I18n.t("contactMe")}
           </div>
         </Link>
@@ -50,7 +49,7 @@ const sideDrawer = props => {
           <li>
             <Link
               onClick={() => props.closeSideDrawer(true)}
-              activeClassName="activeRoute"
+              activeClassName="active-route"
               href="/"
             >
               Home
@@ -59,8 +58,8 @@ const sideDrawer = props => {
           <li>
             <Link
               onClick={() => props.closeSideDrawer(true)}
-              activeClassName="activeRoute"
-              href="/profile/me"
+              activeClassName="active-route"
+              href="/profile"
             >
               my profile
             </Link>

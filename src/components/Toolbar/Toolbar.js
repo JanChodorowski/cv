@@ -5,17 +5,15 @@ import { Link } from "preact-router/match";
 import I18n from "../../i18n/settings";
 import Logo from "../../../assets/logo.png";
 import GithubLogo from "../../../assets/githubLogo.svg";
-// import { connect } from "preact-redux";
-// import { CHANGE_LANGUAGE } from "../../store/actions";
 
 const toolbar = props => {
   let plClass,
     enClass = "";
 
   if (props.locale === "en") {
-    enClass = "active";
+    enClass = "active-lang";
   } else if (props.locale === "pl") {
-    plClass = "active";
+    plClass = "active-lang";
   }
 
   const alertNetworkMessage = () => {
@@ -37,12 +35,12 @@ const toolbar = props => {
         <div className="toolbar_navigation-items">
           <ul>
             <li>
-              <Link activeClassName="activeRoute" href="/">
+              <Link activeClassName="active-route" href="/">
                 Home
               </Link>
             </li>
             <li>
-              <Link activeClassName="activeRoute" href="/profile/me">
+              <Link activeClassName="active-route" href="/profile">
                 my profile
               </Link>
             </li>
@@ -52,7 +50,7 @@ const toolbar = props => {
         <div className="toolbar__tools">
           <ul>
             <Link href="/contact">
-              <li class="contactMe">{I18n.t("contactMe")} </li>
+              <li class="contact-me">{I18n.t("contactMe")} </li>
             </Link>
 
             <li title={I18n.t("gitRepoLink")} class="github__logo">

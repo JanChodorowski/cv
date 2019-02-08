@@ -1,47 +1,46 @@
-import { h, Component } from 'preact';
-import './style.css';
+import { h, Component } from "preact";
+import "./style.css";
+import I18n from "../../i18n/settings";
+import Cat from "../../../assets/cat.svg";
+import JSLogo from "../../../assets/jsLogo.svg";
+import Team from "../../../assets/team.svg";
+import Tools from "../../../assets/tools.svg";
+import Checklist from "../../../assets/checklist.svg";
 
 export default class Profile extends Component {
-	state = {
-		time: Date.now(),
-		count: 10
-	};
+  render() {
+    return (
+      <div className="profile">
+        <img className="top-section__icon" src={Checklist} />
+        <p className="top-section__title">{I18n.t("why")}</p>
+        <p className="top-section__subtitle">{I18n.t("whySub")}</p>
 
-	// update the current time
-	updateTime = () => {
-		this.setState({ time: Date.now() });
-	};
+        <div className="content">
+          <p className="p1">{I18n.t("profileP1")}</p>
+          <div className=" icon1">
+            <div className="icon-div round cat">
+              <img src={Cat} />
+            </div>
+          </div>
+          <p className="p2">{I18n.t("profileP2")}</p>
+          <div className="icon2">
+            <div className="icon-div round">
+              <img className="js-icon" src={JSLogo} />
+            </div>
+          </div>
+          <p className="p3">{I18n.t("profileP3")}</p>
 
-	increment = () => {
-		this.setState({ count: this.state.count+1 });
-	};
+          <div className="icon-div icon3">
+            <img className="" src={Team} />
+          </div>
 
-	// gets called when this route is navigated to
-	componentDidMount() {
-		// start a timer for the clock:
-		this.timer = setInterval(this.updateTime, 1000);
-	}
+          <p className="p4">{I18n.t("profileP4")}</p>
 
-	// gets called just before navigating away from the route
-	componentWillUnmount() {
-		clearInterval(this.timer);
-	}
-
-	// Note: `user` comes from the URL, courtesy of our router
-	render({ user }, { time, count }) {
-		return (
-			<div className="profile">
-				<h1>Profile: {user}</h1>
-				<p>This is the user profile for a user named { user }.</p>
-
-				<div>Current time: {new Date(time).toLocaleString()}</div>
-
-				<p>
-					<button onClick={this.increment}>Click Me</button>
-					{' '}
-					Clicked {count} times.
-				</p>
-			</div>
-		);
-	}
+          <div className="icon-div icon4">
+            <img src={Tools} />
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
