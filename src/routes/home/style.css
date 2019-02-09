@@ -10,7 +10,6 @@
   max-width: 15rem;
   margin: 0 auto;
   border-radius: 50%;
-  /* height: ; */
   border: 1.5px solid rgba(52, 130, 231, 0.24);
 }
 
@@ -20,11 +19,13 @@
   padding: 0 2rem;
   text-align: center;
   font-size: 2rem;
+  padding-top: 10px;
 }
 
 .sub {
   font-size: 1.5rem;
   opacity: 0.5;
+  padding-top: 0;
 }
 
 .home .content {

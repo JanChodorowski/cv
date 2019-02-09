@@ -1,32 +1,18 @@
 import { h } from "preact";
-
 import I18n from "../../i18n/settings";
-
 import Plane from "../../../assets/plane.svg";
 import Location from "../../../assets/location.svg";
 import Mobile from "../../../assets/mobile.svg";
 import Mail from "../../../assets/mail.svg";
-import Instagram from "../../../assets/instagram.svg";
 
 import "./style.css";
 
 const contact = () => {
-  const alertNetworkMessage = () => {
-    alert(I18n.t("alertNetworkMessage"));
-  };
-
   return (
     <div className="contact">
       <div className="top-section">
-        <div>
-          <img src={Plane} className="plane" />
-        </div>
-        <div className="heading">
-          <span>
-            {/* {I18n.t("contactMe")} */}
-            Jan Chodorowski
-          </span>
-        </div>
+        <img src={Plane} className="plane" />
+        <span className="heading">Jan Chodorowski</span>
       </div>
       <div className="contact__items">
         <div>
@@ -34,7 +20,7 @@ const contact = () => {
             <img src={Mobile} />
           </div>
         </div>
-        <div>+48 111-111-111</div>
+        <div>+48 721-219-937</div>
 
         <div>
           <div className="icon">
@@ -42,7 +28,7 @@ const contact = () => {
           </div>
         </div>
 
-        <div>aaaaaaaaaaa.a@aaaaa.aaa</div>
+        <div>chodorowski.j@gmail.com</div>
 
         <div>
           <div className="icon">
@@ -50,18 +36,12 @@ const contact = () => {
           </div>
         </div>
         <div>
-          <p>ul. Brzozowa 60</p>
+          <p>ul. Nefrytowa 52</p>
           <p>Wrocław</p>
         </div>
       </div>
 
-      <div className="bottom-section">
-        <div onClick={alertNetworkMessage} className="instagram">
-          <a href="https://www.instagram.com/chodorowskijasiu/">
-            <img src={Instagram} />
-          </a>
-        </div>
-      </div>
+      <div className="bottom-section" />
     </div>
   );
 };

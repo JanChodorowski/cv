@@ -2,31 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
+  justify-items: flex-start;
   max-width: 500px;
   margin: 0 auto;
   padding-top: 100px;
   height: 100%;
-}
-
-div.top-section {
-  display: flex;
-  flex: 0 1 40%;
-  flex-direction: column;
-}
-
-.top-section > div {
-  flex: 0 0 40%;
-}
-
-.heading {
-  align-items: center;
-  font-size: 1.5rem;
-}
-
-.heading span {
-  text-align: center;
-  opacity: 0.5;
 }
 
 .plane {
@@ -35,11 +15,20 @@ div.top-section {
   max-width: 10rem;
 }
 
+span.heading {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  display: inline-block;
+  text-align: center;
+  opacity: 0.5;
+}
+
 .contact__items {
+  flex: 1 1 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
 .contact__items p {
@@ -47,11 +36,11 @@ div.top-section {
 }
 
 .contact__items > div {
-  flex: 0 1 100%;
-  margin-bottom: 1rem;
+  flex: 0 1 50%;
 }
 
 .icon {
+  margin: 0 auto;
   background: red;
   border-radius: 50%;
   height: 2.5rem;
@@ -63,15 +52,15 @@ div.top-section {
   height: 1.5rem;
 }
 
-.instagram img {
-  height: 2rem;
-}
-
 div.bottom-section {
   flex: 1 1 10%;
 }
 
 @media (min-width: 700px) {
+  .contact {
+    height: auto;
+  }
+
   .contact__items {
     flex-direction: row;
     flex-wrap: wrap;
@@ -84,11 +73,16 @@ div.bottom-section {
 
   .contact__items > div {
     flex: 0 0 30%;
+    margin-bottom: 1rem;
   }
 
   .contact__items :nth-child(2n) {
     flex: 1 0 70%;
     align-self: center;
     text-align: left;
+  }
+
+  div.bottom-section {
+    flex: 1 1 30%;
   }
 }

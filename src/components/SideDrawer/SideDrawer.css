@@ -25,6 +25,7 @@
   width: 90%;
   max-width: 170px;
   display: block;
+  border: 1.5px solid rgba(52, 130, 231, 0.24);
   border-radius: 50%;
  
 }

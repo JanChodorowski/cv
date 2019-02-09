@@ -27,6 +27,11 @@ const sideDrawer = props => {
     plClass = "active-lang";
   }
 
+  const scrollTop = () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  };
+
   return (
     <nav className={drawerClasses}>
       <CloseDrawerButton closeSideDrawer={props.closeSideDrawer} />
@@ -48,31 +53,26 @@ const sideDrawer = props => {
         <ul>
           <li>
             <Link
-              onClick={() => props.closeSideDrawer(true)}
+              onClick={() => {
+                props.closeSideDrawer(true);
+                scrollTop();
+              }}
               activeClassName="active-route"
               href="/"
             >
-              Home
+              {I18n.t("home")}
             </Link>
           </li>
           <li>
             <Link
-              onClick={() => props.closeSideDrawer(true)}
+              onClick={() => {
+                props.closeSideDrawer(true);
+                scrollTop();
+              }}
               activeClassName="active-route"
               href="/profile"
             >
-              my profile
-            </Link>
-          </li>
-
-          <li>
-            <Link onClick={() => props.closeSideDrawer(true)} href="/">
-              some
-            </Link>
-          </li>
-          <li>
-            <Link onClick={() => props.closeSideDrawer(true)} href="/">
-              placeholder
+              {I18n.t("profile")}
             </Link>
           </li>
         </ul>

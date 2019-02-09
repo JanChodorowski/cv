@@ -20,6 +20,11 @@ const toolbar = props => {
     alert(I18n.t("alertNetworkMessage"));
   };
 
+  const scrollTop = () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  };
+
   return (
     <header className="toolbar">
       <nav className="toolbar__navigation">
@@ -35,13 +40,21 @@ const toolbar = props => {
         <div className="toolbar_navigation-items">
           <ul>
             <li>
-              <Link activeClassName="active-route" href="/">
-                Home
+              <Link
+                onClick={() => scrollTop()}
+                activeClassName="active-route"
+                href="/"
+              >
+                {I18n.t("home")}
               </Link>
             </li>
             <li>
-              <Link activeClassName="active-route" href="/profile">
-                my profile
+              <Link
+                onClick={() => scrollTop()}
+                activeClassName="active-route"
+                href="/profile"
+              >
+                 {I18n.t("profile")}
               </Link>
             </li>
           </ul>

@@ -14,7 +14,7 @@ import I18n from "./i18n/settings";
 
 export default class App extends Component {
   state = {
-    sideDrawer: true,
+    sideDrawer: false,
     locale: "en"
   };
 
