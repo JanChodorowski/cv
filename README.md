@@ -38,6 +38,22 @@ npm install
 npm run build
 ```
 
+
+
+<div>Icons made by 
+  
+  <a href="https://www.flaticon.com/authors/popcorns-arts" title="Icon Pond"> Icon Pond </a>
+  
+  <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market"> Vectors Market </a>
+  
+  <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons"> Flat Icons </a>
+  
+ from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+
+
+
+
 ## Case
 The case for the server was designed in Rhino3d software and 3D printed on Creality Ender3 3D printer.
 
