@@ -1,7 +1,9 @@
 # CV SERVER
 
 This project was created as a supplement to my job application as a Junior QA Engineer at Monterail.
-It's purpose it to deliver fully functional web server in smallest form factor possible.
+It's purpose is to deliver fully functional web server in smallest form factor possible.
+
+The battery should provide at least 2 hours of continuous usage.
 
 ## Hardware
 1. ESP8266 WiFi SoC module - ESP-01S
@@ -10,14 +12,16 @@ It's purpose it to deliver fully functional web server in smallest form factor p
 4. 250mAh 3.7V Lithium Polymer Mini Rechargeable Battery
 5. Bistable slide switch
 
+Because ESP-01S modules come with 1MB of Flash memory, which was insufficient, the stock memory was desoldered and Winbond chip was soldered in it's place.
+
 ## Embedded Software
-The software running the webserwer was written using Arduino in PlatformIO environment.
+The software running the web server was written using Arduino in PlatformIO environment.
 
 In order to build the software run the following command inside the terminal form the esp8266 folder:
 ```
 platformio run --target upload
 ```
-After building the frontend (covered later) run the following command to put the data inside of the chip's filesystem.
+After building the frontend (covered later) run the following command to put the data form the "data" folder inside of the chip's filesystem.
 ```
 platformio run --target uploadfs
 ```
@@ -26,9 +30,9 @@ platformio run --target uploadfs
 The frontend was written using Preact.js – fast React.js alternative with small code footprint.
 Because the device is battery-driven it was decided to not use any lazy loading. Upon request the user is provided with index.html which in turn requests bundle file. The bundle file was compressed using gzip.
 
-The only files not bundled inline are the PDFs with CV which are, because of their size, loaded only upon explicit request.
+The only files not bundled inline are the PDFs with CVs which are, because of their size, loaded only upon explicit request.
 
-In order to build the frontend run the following from the terminal inside the root of the document:
+In order to build the frontend, run the following from the terminal inside the root of the document:
 ```
 npm install
 npm run build
@@ -52,7 +56,7 @@ The case for the server was designed in Rhino3d software and 3D printed on Creal
 5.  Navigate to 192.168.4.1.
 6.  After using the device turn it off by reversing step 1.
 
-*When navigating to github via link user will be informed of the need of connecting to the WiFi with the access to the Internet.
+*When navigating to github via link, user will be informed of the need of connecting to the WiFi with the access to the Internet.
 
 
 ### IN CASE OF RUNNING OUT OF BATTERY
