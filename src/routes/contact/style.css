@@ -39,6 +39,10 @@ span.heading {
   flex: 0 1 50%;
 }
 
+.contact__items > div:nth-child(2n) {
+  padding: 0.5rem 0 1rem 0;
+}
+
 .icon {
   margin: 0 auto;
   background: red;
@@ -82,7 +86,7 @@ div.bottom-section {
     text-align: left;
   }
 
-  div.bottom-section {
+  .contact div.bottom-section {
     flex: 1 1 30%;
   }
 }

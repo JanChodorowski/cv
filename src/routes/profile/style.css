@@ -32,6 +32,7 @@ p.top-section__subtitle {
 }
 
 .profile .content p {
+  word-spacing:-2px;
   padding: 3rem;
   font-size: 1.2rem;
   text-align: justify;
@@ -92,6 +93,7 @@ p.top-section__subtitle {
     font-size: 1.2rem;
     text-align: justify;
     margin-bottom: 5rem;
+
   }
 
   .p1 {

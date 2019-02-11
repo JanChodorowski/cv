@@ -12,12 +12,12 @@
   transition: transform 0.5s ease-out;
   display: flex;
   flex-direction: column;
+
 }
 
 .avatar {
   margin-top: 50px;
   clear: right;
-  
 }
 
 .avatar img {
@@ -27,11 +27,10 @@
   display: block;
   border: 1.5px solid rgba(52, 130, 231, 0.24);
   border-radius: 50%;
- 
 }
 
 .name {
-  margin-top: 30px;
+  margin-top: 1rem;
   text-align: center;
 }
 
@@ -41,7 +40,7 @@
 
 div.contact-me {
   display: inline-block;
-  margin: 20px auto;
+  margin: 1rem auto;
   font-size: 14px;
   border-radius: 20px;
   padding: 10px 15px;
@@ -72,7 +71,6 @@ div.contact-me:hover a {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background: rgb(0, 0, 0, 0.02);
 }
 
 .side-drawer ul {
@@ -104,14 +102,13 @@ div.contact-me:hover a {
 
 .bottom-section {
   display: flex;
-  height: 110px;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
 
 .github__logo,
-.github__logo img{
+.github__logo img {
   height: 35px;
 }
 
@@ -124,7 +121,6 @@ span.active {
   opacity: 0.5;
   cursor: pointer;
 }
-
 
 .active-route {
   border-bottom: 1px solid #ec1923;

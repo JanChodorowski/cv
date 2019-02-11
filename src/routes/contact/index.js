@@ -40,7 +40,6 @@ const contact = () => {
           <p>Wrocław</p>
         </div>
       </div>
-
       <div className="bottom-section" />
     </div>
   );

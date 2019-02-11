@@ -9,11 +9,14 @@ import GithubLogo from "../../../assets/githubLogo.svg";
 const toolbar = props => {
   let plClass,
     enClass = "";
+  let CVLink = "";
 
   if (props.locale === "en") {
     enClass = "active-lang";
+    CVLink = "/CV-en.pdf";
   } else if (props.locale === "pl") {
     plClass = "active-lang";
+    CVLink = "/CV-pl.pdf";
   }
 
   const alertNetworkMessage = () => {
@@ -54,8 +57,12 @@ const toolbar = props => {
                 activeClassName="active-route"
                 href="/profile"
               >
-                 {I18n.t("profile")}
+                {I18n.t("profile")}
               </Link>
+            </li>
+
+            <li>
+              <a href={CVLink}>CV</a>
             </li>
           </ul>
         </div>

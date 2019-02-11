@@ -3,7 +3,7 @@ import { h } from "preact";
 import I18n from "../../i18n/settings";
 import { Link } from "preact-router/match";
 import GithubLogo from "../../../assets/githubLogo.svg";
-import Avatar from "../../../assets/me.jpg";
+import Avatar from "../../../assets/me.png";
 
 import "./SideDrawer.css";
 import CloseDrawerButton from "./DrawerCloseButton";
@@ -20,11 +20,14 @@ const sideDrawer = props => {
 
   let plClass,
     enClass = "";
+  let CVLink = "";
 
   if (props.locale === "en") {
     enClass = "active-lang";
+    CVLink = "/CV-en.pdf";
   } else if (props.locale === "pl") {
     plClass = "active-lang";
+    CVLink = "/CV-pl.pdf";
   }
 
   const scrollTop = () => {
@@ -74,6 +77,10 @@ const sideDrawer = props => {
             >
               {I18n.t("profile")}
             </Link>
+          </li>
+
+          <li>
+            <a href={CVLink}>CV</a>
           </li>
         </ul>
       </div>

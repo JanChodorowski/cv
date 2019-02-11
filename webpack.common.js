@@ -27,46 +27,11 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       },
       {
-        test: /\.svg$/,
+        test: /\.(svg|png|jpg)$/,
         use: {
+          // loader: "file-loader"
           loader: "base64-inline-loader"
         }
-      },
-
-      // {
-      //   test: /\.svg$/,
-      //   use: {
-      //     loader: "file-loader"
-
-      //   }
-      // },
-      // {
-      //   test: /.svg$/,
-      //   use: {
-      //     loader: "svg-url-loader",
-      //     options: {
-      //       encoding: "none",
-      //       noquotes: true,
-      //       stripdeclarations: true
-      //     }
-      //   }
-      // },
-
-      {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          "file-loader",
-          {
-            loader: "image-webpack-loader",
-            options: {
-              bypassOnDebug: true,
-              mozjpeg: {
-                progressive: true,
-                quality: 65
-              }
-            }
-          }
-        ]
       },
 
       {

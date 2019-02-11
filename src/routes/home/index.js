@@ -1,7 +1,7 @@
 import { h } from "preact";
 import "./style.css";
 import I18n from "../../i18n/settings";
-import Avatar from "../../../assets/me.jpg";
+import Avatar from "../../../assets/me.png";
 import Graduation from "../../../assets/graduation.svg";
 import Globe from "../../../assets/globe.svg";
 import Computer from "../../../assets/computer.svg";

@@ -38,6 +38,7 @@
   padding: 3rem;
   font-size: 1.2rem;
   text-align: justify;
+  word-spacing:-2px;
 }
 
 .home .icon-div {
