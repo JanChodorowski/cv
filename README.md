@@ -37,14 +37,18 @@ npm run build
 ## Case
 The case for the server was designed in Rhino3d software and 3D printed on Creality Ender3 3D printer.
 
+<img src="documentation/assembly.png" alt="Assembly" width="600"/>
 
 ## Instructions
 
 ### HOW TO USE “CV SERVER”
 1.  Turn the device on by sliding the switch outwards.
+
+<img src="documentation/instructions.png" alt="Instructions" width="400"/>
+
 2.  Connect to “Jan Chodorowski” Access Point using either mobile device or computer.
 3.  Open favorite web browser.
-4.  Ignore the  “no Internet”alerts if any.
+4.  Ignore the “no Internet” alerts if any.
 5.  Navigate to 192.168.4.1.
 6.  After using the device turn it off by reversing step 1.
 
