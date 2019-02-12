@@ -4,12 +4,11 @@
 
 AsyncWebServer server(80);
 
-const char *ssid = "JanChodorowski";
+const char *ssid = "Jan Chodorowski";
 
 void setup()
 {
   delay(50);
-  Serial.begin(115200);
   SPIFFS.begin();
   WiFi.mode(WIFI_AP);
   WiFi.softAP(ssid);
@@ -35,7 +34,6 @@ void setup()
     if (request->method() == HTTP_GET)
     {
       request->send(SPIFFS, "/index.html");
-      Serial.printf("index requested");
     }
     else if (request->method() == HTTP_OPTIONS)
     {
